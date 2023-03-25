@@ -30,7 +30,7 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
-
+# maybe add a menu view in the console
 
 def is_resource_sufficient(order_ingredients):
     """Returns True when order can be made, False if ingredients are insufficient."""
