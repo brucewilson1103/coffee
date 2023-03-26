@@ -1,12 +1,14 @@
+from prettytable import PrettyTable
+
+table = PrettyTable()
+
+table.add_column("Pokemon", ["Squirtle", "Charamander", "Bulbasuar"])
+table.add_column("Type", ["Water", "Fire", "Leaf"])
+
+print(table)
+
 MENU = {
-    "espresso": {
-        "ingredients": {
-            "water": 50,
-            "coffee": 18,
-        },
-        "cost": 1.5,
-    },
-    "latte": {
+    "Squirtle": {
         "ingredients": {
             "water": 200,
             "milk": 150,
@@ -14,14 +16,22 @@ MENU = {
         },
         "cost": 2.5,
     },
-    "cappuccino": {
+    "Charamander": {
         "ingredients": {
             "water": 250,
             "milk": 100,
             "coffee": 24,
         },
         "cost": 3.0,
-    }
+    },
+    "Bulbasuar": {
+        "ingredients": {
+            "water": 250,
+            "milk": 100,
+            "coffee": 24,
+        },
+        "cost": 3.0,
+    },
 }
 
 profit = 0
@@ -74,7 +84,7 @@ def make_coffee(drink_name, order_ingredients):
 is_on = True
 
 while is_on:
-    choice = input("​What would you like? (espresso/latte/cappuccino): ")
+    choice = input("​What would you like? (Squirtle Charamander or Bulbasaur): ")
     if choice == "off":
         is_on = False
     elif choice == "report":
